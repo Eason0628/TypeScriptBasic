@@ -14,10 +14,11 @@ type Expense = {
 
 // 审核类
 class MyAduit {
-  getAduitStatus(status: EnumAuditStatus): void {
+  getAduitStatus(status: EnumAuditStatus, expense: Expense): void {
     if (status === EnumAuditStatus.NO_ADUIT) {
       console.log("没有审核")
     } else if (status === EnumAuditStatus.MANAGER_ADUIT_SUCCESS) {
+      expense.enumAuditStatus = EnumAuditStatus.MANAGER_ADUIT_SUCCESS
       console.log("经理审核通过")
     } else if (status === EnumAuditStatus.FINAL_ADUIT_SUCCESS) {
       console.log("财务审核通过")
@@ -26,4 +27,13 @@ class MyAduit {
 }
 
 const aduit = new MyAduit()
-aduit.getAduitStatus(EnumAuditStatus.NO_ADUIT)
+const expense: Expense = {
+  id: 1,
+  events: "购买商品",
+  time: new Date(),
+  enumAuditStatus: EnumAuditStatus.NO_ADUIT,
+}
+aduit.getAduitStatus(EnumAuditStatus.NO_ADUIT, expense)
+
+
+// 'Expense' only refers to a type, but is being used as a value here.ts(2

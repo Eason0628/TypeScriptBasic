@@ -8,7 +8,6 @@ const Status = {
 class MyAduit {
 
   getAduitStatus(status: number): void {
-
     if (status === Status.NO_ADUIT) {
       console.log("没有审核");
     } else if (status === Status.MANAGER_ADUIT_SUCCESS) {

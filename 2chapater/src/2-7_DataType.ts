@@ -1,5 +1,7 @@
-let data: {}
+let data: {} = true; // {} 是Objece类型的简写
 
+// 1.除了undifine 和 null 剩下的都可以赋值给Object类型
+// 小写的object 赋值时必须是一个对象
 let data2: object = { age: 23 }
 
 // 联合类型
