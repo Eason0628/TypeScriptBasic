@@ -37,7 +37,7 @@ tsc index.ts --noEmitOnError
 2.编译后立即执行的命令
 TypeScript 本身仅负责 “编译”（.ts → .js），无内置 “编译后自动执行” 功能，需结合工具链实现：
 # 全局安装（任意项目可用）
-npm install -g ts-node typescript
+npm install ts-node -g
 # 项目内局部安装（推荐，避免全局依赖冲突）
 npm install ts-node typescript --save-dev
 执行ts-node 文件名.ts   命令：编译并执行 文件名.ts 文件，无需手动运行 .js 文件。
