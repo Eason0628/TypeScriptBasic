@@ -2,8 +2,8 @@
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
     // File Layout
-    "rootDir": "./2chapater/src",
-    "outDir": "./2chapater/dist",
+    // "rootDir": "./src",
+    // "outDir": "./dist",
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
@@ -11,7 +11,7 @@
     "target": "esnext",
     "types": [],
     // For nodejs:
-    "lib": ["esnext","DOM"],
+    // "lib": ["esnext"],
     // "types": ["node"],
     // and npm install -D @types/node
 
@@ -33,7 +33,7 @@
     // "noPropertyAccessFromIndexSignature": true,
 
     // Recommended Options
-    "strict": true,
+    "strict": false,
     "jsx": "react-jsx",
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
