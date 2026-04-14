@@ -4,6 +4,9 @@
 
 type Person={name:string,age:number}
 type Emp={salary:number,address:string}
-type C=Person&Emp&{height:number}
-let obj:C={name:"张三",age:18,salary:3500,address:"beijing",height:180}
+interface InterfaceObj{
+    weight:number
+}
+type C=Person&Emp&{height:number}&InterfaceObj
+let obj:C={name:"张三",age:18,salary:3500,address:"beijing",height:180,weight:150}
 
