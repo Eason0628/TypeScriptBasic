@@ -45,3 +45,27 @@ class Xm extends Students {
 }
 let a = new Students();
 (a as Xm).run(); //编译通过，运⾏报错
+
+
+
+//=============================================================================================================
+// ⾮空断⾔
+type MyFn=()=>number
+function fn(m:MyFn | undefined){
+ let num=m!()
+ let num2=m()//错误写法
+}
+
+//=============================================================================================================
+// 双重断⾔ (不推荐使⽤)
+interface Girl{
+ name:string,
+ cost:()=>void
+}
+interface Boy{
+ name:string,
+ make:()=>void
+}
+function fn(obj:Girl){
+ obj as any as Boy
+}
